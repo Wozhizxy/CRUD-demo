@@ -1,0 +1,15 @@
+{
+  "name": "crud-demo",
+  "version": "1.0.0",
+  "description": "一个基于mongodb和Node.js的用户信息增删改查系统。",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "计科1802张学阳-201808010211",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "mongoose": "^5.12.12"
+  }
+}

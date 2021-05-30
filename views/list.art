@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <title>list</title>
+  </head>
+  <body>
+    <button type="button" class="btn btn-default">
+      <a href="/add">添加用户</a>
+    </button>
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>邮箱</th>
+        <th>爱好</th>
+        <th>操作</th>
+      </tr>
+      {{each users}}
+      <tr>
+        <td>{{$value.name}}</td>
+        <td>{{$value.age}}</td>
+        <td>{{$value.email}}</td>
+        <td>{{$value.hobbies.toString()}}</td>
+        <td>
+            <a href="/update?id={{$value._id.toString()}}"
+            ><button type="button" class="btn btn-default">修改</button></a
+          ><a href="/delete?id={{$value._id.toString()}}"
+            ><button type="button" class="btn btn-default">删除</button></a
+          >
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </body>
+</html>
